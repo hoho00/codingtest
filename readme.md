@@ -81,3 +81,7 @@
 - BFS
 
 - BFS Count 하는 법
+
+5. 13913(숨바꼭질 4)
+
+- BFS trace
