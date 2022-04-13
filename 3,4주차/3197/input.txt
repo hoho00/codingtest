@@ -1,0 +1,18 @@
+1 7
+LXX.XXL
+
+10 2
+.L
+..
+XX
+XX
+XX
+XX
+XX
+XX
+..
+.L
+
+
+
+
