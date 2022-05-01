@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <vector>
 #include <algorithm>
+#include <queue>
 
 using namespace std; 
 
@@ -8,10 +9,8 @@ int N, ans = 0;
 
 vector<pair<int, int>> v;
 
-bool compare(pair<int, int>& p1, pair<int, int>& p2) {
-  if (p1.second == p2.second) return p1.first >p2.first;
-  return p1.second < p2.second;
-}
+
+priority_queue<int, vector<int>, greater<int>> pq;
 
 int main()
 {
@@ -24,26 +23,22 @@ int main()
   for (int i = 0; i < N; i++) {
     int p, d;
     cin >> p >> d;
-    v.push_back({p, d});
+    v.push_back({d, p});
   }
 
-  sort (v.begin(), v.end(), compare);
+  sort (v.begin(), v.end());
 
-  // for (auto e : v) {
-  //   cout << e.first << " " << e.second << endl;
-  // }
+  for (int i = 0; i < N; i++) {
+    pq.push(v[i].second);
+    if (pq.size() > v[i].first) {
+      pq.pop();
+    }
+  }
 
-  int day = 1;
-  int indx = 0;
-  while (indx < v.size()) {
-    if (v[indx].second >= day) {
-      ans += v[indx].first;
-      indx++;
-      day++;
-    }
-    else {
-      indx++;
-    }
+  while (pq.size()) {
+    //cout << pq.top() << endl;
+    ans += pq.top();
+    pq.pop();
   }
   cout << ans; 
   return 0;
