@@ -40,10 +40,6 @@ int main()
       cout << cnt << endl;
       ans += cnt;
     }
-    else if (st.size() && v[st.top()] > v[i]) {
-      //st.push(i);
-      ans ++;
-    }
     if(st.size()) ans++;
     st.push(i);
   }
