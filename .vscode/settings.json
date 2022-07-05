@@ -9,6 +9,7 @@
     "utility": "cpp",
     "ostream": "cpp",
     "__availability": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "deque": "cpp"
   }
 }
