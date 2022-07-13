@@ -10,6 +10,7 @@
     "ostream": "cpp",
     "__availability": "cpp",
     "ios": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "unordered_set": "cpp"
   }
 }
