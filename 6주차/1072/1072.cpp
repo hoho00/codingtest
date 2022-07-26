@@ -7,7 +7,7 @@ using namespace std;
 typedef long long ll;
 
 ll X, Y, Z;
-ll lt = 0, rt = 1e9;
+ll lt = 0, rt = 100000004;
 ll ans;
 
 bool check(ll mid) {
